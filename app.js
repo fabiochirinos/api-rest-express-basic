@@ -5,14 +5,13 @@ const usuarios = require('./routes/usuarios')
 const config = require('config');
 //const logger = require('./logger')
 const morgan = require('morgan');
-const Joi = require('joi');
 const app = express();
 
 //MIDDLEWARES
-app.use(express.json());
+app.use(express.json()); //body
 app.use(express.urlencoded({ extends: true }));
 app.use(express.static('public'));
-app.use('/api/uaurios', usuarios);
+app.use('/api/usuarios', usuarios);
 
 //Configuración de entornos
 console.log('Aplicación: ' + config.get('nombre'));

@@ -1,5 +1,6 @@
 const express = require('express');
-const rutas = express.Router();
+const Joi = require('joi');
+const ruta = express.Router();
 
 const usuarios = [
     { id: 1, nombre: 'Fabio' },
